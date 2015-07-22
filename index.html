@@ -43,12 +43,8 @@
 			});
 		});
 		function downloadCanvas(link, canvasId, filename) {
-		alert(document.getElementById(canvasId).toDataURL());
-			//link.href = document.getElementById(canvasId).toDataURL();
-			//link.download = filename;
-			var canvas = document.getElementById("main-img");
-    			var img    = canvas.toDataURL("image/png");
-    			document.write('<img src="'+img+'"/>');
+			link.href = document.getElementById(canvasId).toDataURL();
+			link.download = filename;
 		}
 	</script>
 
@@ -75,7 +71,8 @@
 					<input type="text" placeholder="Текст снизу" id="text-bot" class="form-control">
 					</input>
 					<br/>
-					<a value="Создать" class="btn btn-primary btn-lg" id="btn-gen">
+					<a class="btn btn-primary btn-lg" id="btn-gen">
+						Создать
 					</a>
 				</form>
 				
