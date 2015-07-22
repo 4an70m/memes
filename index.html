@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Недовольная Лиза</title>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+    </head>
+	<script>
+		$(document).ready(function(){
+			var textTop="";
+			var textBot="";
+			var c = document.getElementById("main-img");
+			c.width = 640;
+			c.height = 480;
+			var ctx = c.getContext("2d");
+			ctx.font = "40px Helvetica";
+			ctx.fillStyle = "#fff";
+			ctx.textAlign = 'center';
+			var img = new Image(); 
+			img.src = '1.png';
+			img.onload = function() {
+				ctx.drawImage(img,0,0, c.width, c.height);
+				$("#text-top").keyup(function(e){
+					ctx.clearRect(0, 0, c.width, c.height);
+					ctx.drawImage(img,0,0, c.width, c.height);
+					textTop=$("#text-top").val().toUpperCase()
+					ctx.fillText(textTop, c.width / 2,40);
+					ctx.fillText(textBot, c.width / 2,c.height - 40);
+				});
+				$("#text-bot").keyup(function(e){
+					ctx.clearRect(0, 0, c.width, c.height);
+					ctx.drawImage(img,0,0, c.width, c.height);
+					textBot=$("#text-bot").val().toUpperCase();
+					ctx.fillText(textTop, c.width / 2,40);
+					ctx.fillText(textBot, c.width / 2,c.height - 40);
+				});
+			}
+			$("#btn-gen").click(function(){
+				downloadCanvas(this, 'main-img', 'Memes.png');
+			});
+		});
+		function downloadCanvas(link, canvasId, filename) {
+		alert(document.getElementById(canvasId).toDataURL());
+			link.href = document.getElementById(canvasId).toDataURL();
+			link.download = filename;
+		}
+	</script>
+
+    <body>
+		<!--
+		<div class="fixed-menu">
+			<form role="form" class="form-inline">
+				<input type="file">
+				</input>
+				<input type="button" value="Загрузить" class="btn btn-primary">
+				</input>
+			</form>
+		</div>
+		-->
+		<div class="container">
+			<h1>MEMES GENERATOR</h1>
+			<div class="img-container">
+				<canvas id="main-img">
+				</canvas>
+				<form role="form" class="centred-form">
+					<input type="text" placeholder="Текст сверху" id="text-top" class="form-control">
+					</input>
+					<br/>
+					<input type="text" placeholder="Текст снизу" id="text-bot" class="form-control">
+					</input>
+					<br/>
+					<input type="button" value="Создать" class="btn btn-primary btn-lg" id="btn-gen">
+					</input>
+				</form>
+				
+			</div>
+		</div>
+    </body>
+</html>
