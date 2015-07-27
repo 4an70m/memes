@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+<<<<<<< HEAD
+		<title>Недовольная Лиза</title>
+=======
 		<meta charset="utf-8">
 		<title>ГЌГҐГ¤Г®ГўГ®Г«ГјГ­Г Гї Г‹ГЁГ§Г </title>
+>>>>>>> origin/master
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -41,6 +45,9 @@
 			$("#btn-gen").click(function(){
 				downloadCanvas(this, 'main-img', 'Memes.png');
 			});
+			$(".custom-list li img").click(function(){
+				img.src = $(this).attr('src');
+			});
 		});
 		function downloadCanvas(link, canvasId, filename) {
 		alert(document.getElementById(canvasId).toDataURL());
@@ -58,12 +65,47 @@
 			<form role="form" class="form-inline">
 				<input type="file">
 				</input>
+<<<<<<< HEAD
+				<input type="button" value="Upload" class="btn btn-primary">
+=======
 				<input type="button" value="Г‡Г ГЈГ°ГіГ§ГЁГІГј" class="btn btn-primary">
+>>>>>>> origin/master
 				</input>
 			</form>
 		</div>
 		-->
 		<div class="container">
+<<<<<<< HEAD
+			<div class="row">
+				<div class="col-sm-9">
+					<h1 class="text-center">MEMES GENERATOR</h1>
+					<div class="img-container">
+						<canvas id="main-img">
+						</canvas>
+						<form role="form" class="centred-form">
+							<input type="text" placeholder="Upper text" id="text-top" class="form-control"/></input>
+							<br/>
+							<input type="text" placeholder="Lower text" id="text-bot" class="form-control"/>
+							<br/>
+							<input type="button" value="Generate" class="btn btn-primary btn-lg" id="btn-gen"/>
+						</form>
+					</div>
+				</div>
+					
+				<div class="col-sm-3 right-menu">
+					<ul class="list-unstyled custom-list">
+						<li>
+							<img src="1.png" class="img-responsive"></img>
+						</li>
+						<li>
+							<img src="2.png" class="img-responsive"></img>
+						</li>
+						<li>
+							<img src="3.png" class="img-responsive"></img>
+						</li>
+					</ul>
+				</div>
+=======
 			<h1>MEMES GENERATOR</h1>
 			<div class="img-container">
 				<canvas id="main-img">
@@ -79,6 +121,7 @@
 					</a>
 				</form>
 				
+>>>>>>> origin/master
 			</div>
 		</div>
     </body>
