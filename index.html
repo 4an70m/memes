@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-<<<<<<< HEAD
-		<title>����������� ����</title>
-=======
-		<meta charset="utf-8">
-		<title>Íåäîâîëüíàÿ Ëèçà</title>
->>>>>>> origin/master
+		<title>Meme Generator</title>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -50,12 +45,8 @@
 			});
 		});
 		function downloadCanvas(link, canvasId, filename) {
-		alert(document.getElementById(canvasId).toDataURL());
-			//link.href = document.getElementById(canvasId).toDataURL();
-			//link.download = filename;
-			var canvas = document.getElementById("main-img");
-    			var img    = canvas.toDataURL("image/png");
-    			document.write('<img src="'+img+'"/>');
+			link.href = document.getElementById(canvasId).toDataURL();
+			link.download = filename;
 		}
 	</script>
 
@@ -63,19 +54,12 @@
 		<!--
 		<div class="fixed-menu">
 			<form role="form" class="form-inline">
-				<input type="file">
-				</input>
-<<<<<<< HEAD
-				<input type="button" value="Upload" class="btn btn-primary">
-=======
-				<input type="button" value="Çàãðóçèòü" class="btn btn-primary">
->>>>>>> origin/master
-				</input>
+				<input type="file"/>
+				<input type="button" value="Upload" class="btn btn-primary"/>
 			</form>
 		</div>
 		-->
 		<div class="container">
-<<<<<<< HEAD
 			<div class="row">
 				<div class="col-sm-9">
 					<h1 class="text-center">MEMES GENERATOR</h1>
@@ -105,23 +89,20 @@
 						</li>
 					</ul>
 				</div>
-=======
 			<h1>MEMES GENERATOR</h1>
 			<div class="img-container">
 				<canvas id="main-img">
 				</canvas>
 				<form role="form" class="centred-form">
-					<input type="text" placeholder="Òåêñò ñâåðõó" id="text-top" class="form-control">
+					<input type="text" placeholder="Text above" id="text-top" class="form-control">
 					</input>
 					<br/>
-					<input type="text" placeholder="Òåêñò ñíèçó" id="text-bot" class="form-control">
+					<input type="text" placeholder="Text below" id="text-bot" class="form-control">
 					</input>
 					<br/>
-					<a value="Ñîçäàòü" class="btn btn-primary btn-lg" id="btn-gen">
+					<a value="Generate" class="btn btn-primary btn-lg" id="btn-gen">
 					</a>
 				</form>
-				
->>>>>>> origin/master
 			</div>
 		</div>
     </body>
