@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-    		<meta charset="utf-8">
-		<title>Недовольная Лиза</title>
+<<<<<<< HEAD
+		<title>����������� ����</title>
+=======
+		<meta charset="utf-8">
+		<title>Íåäîâîëüíàÿ Ëèçà</title>
+>>>>>>> origin/master
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -41,10 +45,17 @@
 			$("#btn-gen").click(function(){
 				downloadCanvas(this, 'main-img', 'Memes.png');
 			});
+			$(".custom-list li img").click(function(){
+				img.src = $(this).attr('src');
+			});
 		});
 		function downloadCanvas(link, canvasId, filename) {
-			link.href = document.getElementById(canvasId).toDataURL();
-			link.download = filename;
+		alert(document.getElementById(canvasId).toDataURL());
+			//link.href = document.getElementById(canvasId).toDataURL();
+			//link.download = filename;
+			var canvas = document.getElementById("main-img");
+    			var img    = canvas.toDataURL("image/png");
+    			document.write('<img src="'+img+'"/>');
 		}
 	</script>
 
@@ -54,28 +65,63 @@
 			<form role="form" class="form-inline">
 				<input type="file">
 				</input>
+<<<<<<< HEAD
+				<input type="button" value="Upload" class="btn btn-primary">
+=======
 				<input type="button" value="Çàãðóçèòü" class="btn btn-primary">
+>>>>>>> origin/master
 				</input>
 			</form>
 		</div>
 		-->
 		<div class="container">
+<<<<<<< HEAD
+			<div class="row">
+				<div class="col-sm-9">
+					<h1 class="text-center">MEMES GENERATOR</h1>
+					<div class="img-container">
+						<canvas id="main-img">
+						</canvas>
+						<form role="form" class="centred-form">
+							<input type="text" placeholder="Upper text" id="text-top" class="form-control"/></input>
+							<br/>
+							<input type="text" placeholder="Lower text" id="text-bot" class="form-control"/>
+							<br/>
+							<input type="button" value="Generate" class="btn btn-primary btn-lg" id="btn-gen"/>
+						</form>
+					</div>
+				</div>
+					
+				<div class="col-sm-3 right-menu">
+					<ul class="list-unstyled custom-list">
+						<li>
+							<img src="1.png" class="img-responsive"></img>
+						</li>
+						<li>
+							<img src="2.png" class="img-responsive"></img>
+						</li>
+						<li>
+							<img src="3.png" class="img-responsive"></img>
+						</li>
+					</ul>
+				</div>
+=======
 			<h1>MEMES GENERATOR</h1>
 			<div class="img-container">
 				<canvas id="main-img">
 				</canvas>
 				<form role="form" class="centred-form">
-					<input type="text" placeholder="Текст сверху" id="text-top" class="form-control">
+					<input type="text" placeholder="Òåêñò ñâåðõó" id="text-top" class="form-control">
 					</input>
 					<br/>
-					<input type="text" placeholder="Текст снизу" id="text-bot" class="form-control">
+					<input type="text" placeholder="Òåêñò ñíèçó" id="text-bot" class="form-control">
 					</input>
 					<br/>
-					<a class="btn btn-primary btn-lg" id="btn-gen">
-						Создать
+					<a value="Ñîçäàòü" class="btn btn-primary btn-lg" id="btn-gen">
 					</a>
 				</form>
 				
+>>>>>>> origin/master
 			</div>
 		</div>
     </body>

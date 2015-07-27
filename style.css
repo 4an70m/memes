@@ -41,3 +41,20 @@ h1{
 	background-color: lightgray;
 	width: 100%;
 }
+.custom-list li{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.custom-list li:hover{
+	cursor: pointer;
+	-webkit-box-shadow: 0px 0px 28px 5px rgba(189,6,6,1);
+	-moz-box-shadow: 0px 0px 28px 5px rgba(189,6,6,1);
+	box-shadow: 0px 0px 28px 5px rgba(189,6,6,1);
+}
+.right-menu{
+	background-color: #170433;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+}
